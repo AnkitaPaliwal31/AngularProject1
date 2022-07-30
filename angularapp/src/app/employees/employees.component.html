@@ -13,7 +13,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let employee of employees | search:query" appSmartTable>
+        <tr *ngFor="let employee of (employees$|async) | search:query" appSmartTable>
             <td class="text-center">{{employee.id}}</td>
             <td class="text-center">{{employee.name}}</td>
             <td class="text-center">{{employee.age}}</td>

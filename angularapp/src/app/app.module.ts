@@ -12,6 +12,7 @@ import { AttributeDirComponent } from './attribute-dir/attribute-dir.component';
 import { SearchPipe } from './pipes/search.pipe';
 import { SmartTableDirective } from './directives/smart-table.directive';
 import { SortPipe } from './pipes/sort.pipe';
+import { HttpClientModule} from '@angular/common/http';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { SortPipe } from './pipes/sort.pipe';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
