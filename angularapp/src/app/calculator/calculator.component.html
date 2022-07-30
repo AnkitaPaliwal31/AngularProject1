@@ -1,0 +1,9 @@
+<h5>Calculator </h5>
+<div>First Number : <input type="number" [(ngModel)]="firstNumber"/></div>
+<div>Second Number : <input type="number" [(ngModel)]="secondNumber"/></div>
+<div>Result : <input type="number" readonly [(ngModel)]="result"/></div>
+<button class="button" (click)="add(firstNumber,secondNumber)">Add</button>
+<button class="button" (click)="sub(firstNumber,secondNumber)">Sub</button>
+<button class="button" (click)="mul(firstNumber,secondNumber)">Mul</button>
+<button class="button" (click)="div(firstNumber,secondNumber)">Div</button>
+<button class="button" (click)="reset()">Reset</button>

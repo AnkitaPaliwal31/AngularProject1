@@ -1,0 +1,19 @@
+<h5>Product List</h5>
+ <div class="pb-2"><select name="option" id="option" [(ngModel)]="selectedOption">
+  <option *ngFor="let sortByOption of sortByOptions">{{sortByOption}}</option>
+</select></div>
+<div class="card card-main">
+  <div class="card-body" *ngFor="let product of products|sort:selectedOption;">
+    <div class="card card-1">
+      <div class="card-header text-center">
+        <img  [src]="product.image" alt="product image" >
+      </div>
+      <div class="card-body">
+        <div><b>Product Id:</b> {{product.id}}</div>
+        <div><b>Product Name:</b> {{product.name}}</div>
+        <div><b>Product Price:</b> {{product.price}}</div>
+        <div><b>Product Desc: </b>{{product.desc}}</div>
+      </div>
+    </div>
+  </div>
+</div>
