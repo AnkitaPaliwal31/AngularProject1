@@ -13,6 +13,10 @@ import { SearchPipe } from './pipes/search.pipe';
 import { SmartTableDirective } from './directives/smart-table.directive';
 import { SortPipe } from './pipes/sort.pipe';
 import { HttpClientModule} from '@angular/common/http';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
+import { OneComponent } from './one/one.component';
+import { TwoComponent } from './two/two.component';
 
 
 @NgModule({
@@ -25,7 +29,11 @@ import { HttpClientModule} from '@angular/common/http';
     AttributeDirComponent,
     SearchPipe,
     SmartTableDirective,
-    SortPipe
+    SortPipe,
+    ParentComponent,
+    ChildComponent,
+    OneComponent,
+    TwoComponent
   ],
   imports: [
     BrowserModule,
