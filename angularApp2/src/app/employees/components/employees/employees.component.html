@@ -1,0 +1,26 @@
+<div class="p-5">
+    <h5 class="mt-2">Employee List</h5>
+<div class="pb-2">
+    <input type="text" class="form-control" placeholder="Search" [(ngModel)]="query" id="listSearch">
+</div>
+<table class="table align-middle table-bordered mb-0 bg-light">
+    <thead class=" table-info">
+        <tr>
+            <th class="text-center">Id</th>
+            <th class="text-center">Name</th>
+            <th class="text-center">Age</th>
+            <th class="text-center">Address</th>
+            <th class="text-center">Salary</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let employee of (employees$|async) | search:query" appSmartTable>
+            <td class="text-center">{{employee.id}}</td>
+            <td class="text-center">{{employee.name}}</td>
+            <td class="text-center">{{employee.age}}</td>
+            <td class="text-center">{{employee.address}}</td>
+            <td class="text-center">{{employee.salary|currency}}</td>   
+        </tr>
+    </tbody>
+</table>
+</div>
