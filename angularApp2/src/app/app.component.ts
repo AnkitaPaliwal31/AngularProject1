@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CartDataBahaivourService } from './shared/cart-data-bahaivour.service';
+import { CartDataBahaivourService } from './shared/services/cart-data-bahaivour.service';
 
 @Component({
   selector: 'app-root',
