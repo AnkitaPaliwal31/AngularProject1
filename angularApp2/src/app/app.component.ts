@@ -13,6 +13,7 @@ export class AppComponent implements OnInit {
   title = 'angularApp2';
   totalItems:any;
   isLoggedIn:boolean=false;
+  imageUrl:string="assets/logo.png";
   constructor(private cartDataBahaivourService:CartDataBahaivourService,
     private loginDataBehaviorService:LoginDataBehaviorService,
     private authService:AuthService,
