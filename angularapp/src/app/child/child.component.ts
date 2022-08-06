@@ -14,7 +14,6 @@ export class ChildComponent implements OnInit {
   ngOnInit(): void {
   }
 saveDeposit(amount:number){
-  debugger;
 this.actualAmount=this.actualAmount+amount;
 this.saveDepositNotify.emit(this.actualAmount);
 }
