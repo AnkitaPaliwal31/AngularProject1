@@ -1,45 +1,39 @@
 {
-  "Employees":[{
-      "id":101,
-      "name":"Max",
-      "userName":"max@gmail.com",
-      "password":"Pass@123",
-      "age":28,
-      "address":"Mumbai",
-      "salary":700000
+  "Employees": [
+    {
+      "id": 101,
+      "name": "Max",
+      "userName": "max@gmail.com",
+      "password": "Pass@123",
+      "salary": "750000",
+      "age": 28,
+      "address": "Mumbai"
     },
     {
-      "id":102,
-      "name":"John",
-      "userName":"john@gmail.com",
-      "password":"Pass@123",
-      "age":28,
-      "address":"Pune",
-      "salary":900000
+      "id": 102,
+      "name": "John",
+      "userName": "john@gmail.com",
+      "password": "Pass@123",
+      "age": 28,
+      "address": "Pune",
+      "salary": 900000
     },
     {
-      "id":103,
-      "name":"Clark",
-      "userName":"clark@gmail.com",
-      "age":29,
-      "address":"Mumbai",
-      "salary":100000
+      "id": 103,
+      "name": "Clark",
+      "userName": "clark@gmail.com",
+      "age": 29,
+      "address": "Mumbai",
+      "salary": 100000
     },
     {
-      "id":104,
-      "name":"Kelly",
-      "userName":"kelly@gmail.com",
-      "password":"Pass@123",
-      "age":32,
-      "address":"Ohio",
-      "salary":800000
-    },{
-      "id":105,
-      "name":"Kim",
-      "userName":"kim@gmail.com",
-      "password":"Pass@123",
-      "age":28,
-      "address":"Florid",
-      "salary":960000
-    }]
+      "id": 104,
+      "name": "Kelly",
+      "userName": "kelly@gmail.com",
+      "password": "Pass@123",
+      "age": 32,
+      "address": "Ohio",
+      "salary": 800000
+    }
+  ]
 }

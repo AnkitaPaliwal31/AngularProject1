@@ -1,7 +1,12 @@
 <div class="p-5">
     <h5 class="mt-2">Employee List</h5>
-<div class="pb-2">
-    <input type="text" class="form-control" placeholder="Search" [(ngModel)]="query" id="listSearch">
+<div class="pb-2 container">
+    <div>
+        <input type="text" class="form-control" placeholder="Search" [(ngModel)]="query" id="listSearch">
+    </div>
+    <div>
+        <button type="button" class="btn btn-primary" (click)="addEmployee()">Add Employee</button>
+    </div>
 </div>
 <table class="table align-middle table-bordered mb-0 bg-light">
     <thead class=" table-info">
@@ -11,6 +16,8 @@
             <th class="text-center">Age</th>
             <th class="text-center">Address</th>
             <th class="text-center">Salary</th>
+            <th class="text-center">Edit</th>
+            <th class="text-center">Delete</th>
         </tr>
     </thead>
     <tbody>
@@ -19,7 +26,9 @@
             <td class="text-center">{{employee.name}}</td>
             <td class="text-center">{{employee.age}}</td>
             <td class="text-center">{{employee.address}}</td>
-            <td class="text-center">{{employee.salary|currency}}</td>   
+            <td class="text-center">{{employee.salary|currency}}</td> 
+            <td class="text-center"><a (click)="edit(employee.id)"><i class="fa-solid fa-pen-to-square"></i></a></td>  
+            <td class="text-center"><a (click)="delete(employee.id)"><i class="fa-solid fa-trash-can"></i></a></td>
         </tr>
     </tbody>
 </table>
