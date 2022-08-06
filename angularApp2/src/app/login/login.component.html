@@ -1,0 +1,24 @@
+<div class="wrapper fadeInDown pt-5 mt-5">
+    <div id="formContent">
+        <!-- Tabs Titles -->
+        <i class="fa-solid fa-user"></i>
+        <h2 class="active"> Sign In </h2>
+        <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm.value)" class="mb-3 mt-3">
+            <div class="form-group">
+                <input type="text" id="userName" class="fadeIn second form-control" name="userName" placeholder="user name"
+                    ngModel required #userName="ngModel">
+                <div class="text text-danger" *ngIf="!userName.valid && userName.touched">
+                    username is required
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="text" id="password" class="fadeIn third form-control" name="password"
+                    placeholder="password" ngModel required #password="ngModel">
+                <div class="text text-danger" *ngIf="!password.valid && password.touched">
+                    password is required
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary mt-2" [disabled]="!loginForm.form.valid">Log In</button>
+        </form>
+    </div>
+</div>

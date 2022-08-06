@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { CartDataBahaivourService } from './shared/services/cart-data-bahaivour.service';
+import { Router } from '@angular/router';
+import { AuthService } from './shared/services/auth.service';
+import { CartDataBahaivourService } from './shared/services/cart-data-behavior.service';
+import { LoginDataBehaviorService } from './shared/services/login-data-behavior.service';
 
 @Component({
   selector: 'app-root',
@@ -8,17 +11,27 @@ import { CartDataBahaivourService } from './shared/services/cart-data-bahaivour.
 })
 export class AppComponent implements OnInit {
   title = 'angularApp2';
-  cartTotalItems:any=[];
   totalItems:any;
-  constructor(private cartDataBahaivourService:CartDataBahaivourService){
+  isLoggedIn:boolean=false;
+  constructor(private cartDataBahaivourService:CartDataBahaivourService,
+    private loginDataBehaviorService:LoginDataBehaviorService,
+    private authService:AuthService,
+    private router:Router) { }
 
-  }
-  ngOnInit() {
+    ngOnInit(): void {
+   this.loginDataBehaviorService.getLoginDetails().subscribe(resp=>
+      {
+        this.isLoggedIn=resp;
+      });
     this.cartDataBahaivourService.getCartTotalItems().subscribe(
       resp=>{
-        this.cartTotalItems=resp;
-        this.totalItems=this.cartTotalItems.length;
+        this.totalItems=resp.length;
       }
     );
+  }
+  logout(){  
+    this.authService.logout();
+    this.loginDataBehaviorService.setLoginData(false);
+    this.router.navigate(['/login']);
   }
 }

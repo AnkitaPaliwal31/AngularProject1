@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class EmployeesService {
-  url:string="assets/employees.json";
+  url:string="http://localhost:3000/Employees";
   constructor(private httpClient:HttpClient) { }
   getEmployees(){
     return this.httpClient.get(this.url);

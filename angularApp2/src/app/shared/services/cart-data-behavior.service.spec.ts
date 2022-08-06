@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { CartDataBahaivourService } from './cart-data-bahaivour.service';
+import { CartDataBahaivourService } from './cart-data-behavior.service';
 
 describe('CartDataBahaivourService', () => {
   let service: CartDataBahaivourService;

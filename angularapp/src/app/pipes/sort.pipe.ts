@@ -6,7 +6,6 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class SortPipe implements PipeTransform {
   transform(list: any[], selectedOption: string,
     value:string="",sortBy:boolean=false): any[] {
-      debugger;
       if(selectedOption=='Sort by Name Asc'){
         value='name';
         sortBy=true;
