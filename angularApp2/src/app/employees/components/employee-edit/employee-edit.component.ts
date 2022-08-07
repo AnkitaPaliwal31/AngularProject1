@@ -11,6 +11,7 @@ import { Location } from '@angular/common';
 })
 export class EmployeeEditComponent implements OnInit {
   submitted:boolean=false;
+  isEdit:boolean=false;
   id:any;
   constructor(
       private formBuilder: FormBuilder,

@@ -34,7 +34,7 @@
         <input type="text" formControlName="address" class="form-control" />
     </div>
     <div class="form-group mt-1">
-        <button type="submit" [disabled]="userForm.invalid" class="btn btn-primary">Save Employee</button>
+        <button type="submit" [disabled]="userForm.invalid" class="btn btn-primary">{{this.id>0?'Edit':'Add'}} Employee</button>
     </div>
 </form>
 </div>

@@ -11,8 +11,15 @@ public productCartList=new BehaviorSubject<any>([]);
   getCartTotalItems(){
    return this.productCartList.asObservable();
   }
-  addProductToCart(id:number){
-    this.totalItems.push(id);
+  addProductToCart(product:any){
+    this.totalItems.push(product);
+    this.productCartList.next(this.totalItems);
+  }
+  removeProductFromCart(product:any){
+    this.totalItems.pop(product);
+  }
+  removeAllProductFromCart(product:any){
+    this.totalItems=[];
     this.productCartList.next(this.totalItems);
   }
 }

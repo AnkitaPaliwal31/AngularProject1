@@ -34,6 +34,15 @@
       "age": 32,
       "address": "Ohio",
       "salary": 800000
+    },
+    {
+      "id": "110",
+      "name": "Kim",
+      "userName": "kim@gmail.com",
+      "password": "Pass@123",
+      "salary": "80000",
+      "age": "30",
+      "address": "Florida"
     }
   ]
 }

@@ -23,8 +23,8 @@ product:any={};
         this.product=resp;
       })
   }
-  addToCard(id:number){
-    this.cartDataBahaivourService.addProductToCart(id);
+  addToCard(product:any){
+    this.cartDataBahaivourService.addProductToCart(product);
   }
   back(){
     this.location.back();

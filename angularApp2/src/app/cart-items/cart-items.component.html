@@ -1,0 +1,32 @@
+<div class="CartContainer mt-5">
+    <div class="Header">
+        <h3 class="Heading">Shopping Cart</h3>
+        <h5 class="Action" *ngIf="cartItems.length>0"><a (click)="deleteAll()">Remove all</a></h5>
+    </div>
+
+    <div class="Cart-Items" *ngFor="let cartItem of cartItems" >
+          <div class="image-box">
+              <img [src]="cartItem.image" style="height:120px" />
+          </div>
+          <div class="about">
+              <p class="truncate" title="{{cartItem.title}}">{{cartItem.title}}</p>
+          </div>
+          <div class="counter">
+              <div class="btn"><a (click)="addItem(cartItem)">+</a></div>
+              <div class="count">2</div>
+              <div class="btn"><a (click)="deleteItem(cartItem)">-</a></div>
+          </div>
+          <div class="prices">
+              <div class="amount">${{cartItem.price}}</div>
+              <div class="remove"><a (click)="deleteItem(cartItem)"><u>Remove</u></a></div>
+          </div>
+    </div>
+  <hr> 
+  <div class="checkout">
+  <div class="total">
+      <div>
+          <div class="Subtotal">Sub-Total</div>
+      </div>
+      <div class="total-amount">{{totalAmount}}</div>
+  </div>
+</div>

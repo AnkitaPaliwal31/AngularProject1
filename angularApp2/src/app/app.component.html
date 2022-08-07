@@ -27,7 +27,7 @@
   </div>
   
     <div style="margin-right: 20px;" *ngIf="isLoggedIn">
-      <a class="text-white mt-2"><i class="fas fa-shopping-cart"><span class="position-absolute left-100 translate-middle badge rounded-pill bg-light text-dark" style="color: red;" *ngIf="totalItems>0">{{totalItems}}</span></i></a>
+      <a class="text-white mt-2" routerLink="/cart" routerLinkActive="active"><i class="fas fa-shopping-cart" ><span class="position-absolute left-100 translate-middle badge rounded-pill bg-light text-dark" style="color: red;" *ngIf="totalItems>0">{{totalItems}}</span></i></a>
       </div>
 </nav>
 <router-outlet></router-outlet>
